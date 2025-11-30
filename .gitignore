@@ -8,9 +8,6 @@ __pycache__/
 # Wandb
 wandb/
 
-# Figures
-figures/
-
 # Virtual Environment
 venv/
 env/
