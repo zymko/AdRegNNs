@@ -2,10 +2,6 @@
 
 This repository implements Adversarial Regularization Networks (AdReg) for solving ill-posed inverse problems, with a focus on image reconstruction from noisy measurements.
 
-## Overview
-
-Adversarial Regularization Networks provide a learned regularization approach for inverse problems. Unlike traditional methods like Tikhonov regularization (L2), AdReg learns to discriminate between true solutions and naive reconstructions, offering superior noise suppression while preserving important features.
-
 ## Features
 
 - **Multiple Optimization Algorithms**: Comparison of SGD, Momentum SGD, Adam, AdamW, and RMSprop for training AdReg
@@ -28,7 +24,7 @@ The following figures demonstrate the reconstruction quality of different method
       <br />Ground Truth
     </td>
     <td align="center">
-      <img src="figures/MNIST_recovered_image.png" width="250px" />
+      <img src="figures/MNIST_recovered_val.png" width="250px" />
       <br />Recovered (AdReg)
     </td>
     <td align="center">
@@ -38,8 +34,8 @@ The following figures demonstrate the reconstruction quality of different method
   </tr>
   <tr>
     <td align="center">
-      <img src="figures/MNIST_recovered_no_reg_image.png" width="250px" />
-      <br />Perturbed (Adam)
+      <img src="figures/MNIST_recovered_no_reg.png" width="250px" />
+      <br />Perturbed (RMSProp)
     </td>
     <td align="center">
       <img src="figures/MNIST_l2_reg_image.png" width="250px" />
@@ -52,7 +48,7 @@ The following figures demonstrate the reconstruction quality of different method
   </tr>
 </table>
 
-**Figure 1**: Examples from MNIST and inverse-problem solutions by different methods. "Recovered" uses adversarial regularizers; "lstsq" is least squares without regularization; "Adam" has no weight decay; "L2" is Tikhonov regularization.
+**Figure 1**: Examples from MNIST and inverse-problem solutions by different methods. "Recovered" uses adversarial regularizers; "lstsq" is least squares without regularization; "RMSProp" has no weight decay; "L2" is Tikhonov regularization.
 
 
 
